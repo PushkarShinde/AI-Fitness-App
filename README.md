@@ -1,6 +1,6 @@
 # AI Fitness App
 
-Welcome to the **AI Fitness App** — an intelligent, microservice-driven health companion that helps users track their fitness activities and leverages AI to provide personalized insights!
+Welcome to the **AI Fitness App** — anecho $PATH intelligent, microservice-driven health companion that helps users track their fitness activities and leverages AI to provide personalized insights!
 
 ---
 
@@ -21,7 +21,7 @@ Welcome to the **AI Fitness App** — an intelligent, microservice-driven health
 
 Here's a high-level overview of the system architecture:
 
-![AI Fitness Architecture](assets/ai-fitness-architecture.png)
+![AI Fitness Architecture](./assets/FitnessMicroserviceArchitecture.png)
 
 > 💡 Replace this with your actual diagram. You can recreate it using [draw.io](https://draw.io), export it as `.png`, and place it in an `/assets` folder in your repo.
 
