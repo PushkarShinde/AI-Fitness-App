@@ -1,6 +1,6 @@
 package com.fitness.userservice.dto;
 // DATA TRANSFER OBJECT (DTO)
-import jakarta.validation.Valid;
+// import jakarta.validation.Valid;
 import lombok.Data;
 
 import java.time.LocalDateTime;

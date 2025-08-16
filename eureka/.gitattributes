@@ -1,0 +1,35 @@
+# Ensure consistent line endings
+
+# Shell scripts - LF
+*.sh text eol=lf
+/mvnw text eol=lf
+
+# Batch scripts - CRLF
+*.cmd text eol=crlf
+/mvnw.cmd text eol=crlf
+
+# Java source code - LF
+*.java text eol=lf
+
+# Config files - LF
+*.yml text eol=lf
+*.yaml text eol=lf
+*.properties text eol=lf
+
+# Markdown and text files - LF
+*.md text eol=lf
+*.txt text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# XML/HTML/JSON files - LF
+*.xml text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+
+# Binary files - never convert
+*.jar binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
