@@ -23,8 +23,6 @@ Here's a high-level overview of the system architecture:
 
 ![AI Fitness Architecture](./assets/FitnessMicroserviceArchitecture.png)
 
-> 💡 Replace this with your actual diagram. You can recreate it using [draw.io](https://draw.io), export it as `.png`, and place it in an `/assets` folder in your repo.
-
 ---
 
 ## 🧰 Tech Stack
