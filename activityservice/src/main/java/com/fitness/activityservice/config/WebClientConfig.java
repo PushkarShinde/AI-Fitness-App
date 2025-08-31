@@ -19,4 +19,6 @@ public class WebClientConfig {
                 .baseUrl("http://USERSERVICE")//ab userservic me bhi ek end point banana padega right! to validate this call
                 .build();
     }
+
+
 }
