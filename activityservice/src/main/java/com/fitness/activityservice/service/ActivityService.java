@@ -29,11 +29,12 @@ public class ActivityService {
     private String routingKey;
 
     public ActivityResponse trackActivity(ActivityRequest request) {
-
+        // Validating if the activity is provided by a valid user (Synchronous)
         boolean isValidUser=userValidationService.validateUser(request.getUserId());
         if(!isValidUser)
             throw new RuntimeException("Invalid user: "+request.getUserId());
 
+        //saving the validated activity into our DB
         Activity activity= Activity.builder()
                 .userId(request.getUserId())
                 .type(request.getType())
@@ -45,7 +46,7 @@ public class ActivityService {
 
         Activity savedActivity=activityRepository.save(activity);
 
-        //Publishing to RabbitMq for AI processing
+        //Publishing our validated activity to RabbitMq for AI processing (Asynchronous)
         try{
             rabbitTemplate.convertAndSend(exchange, routingKey, savedActivity);
         }catch(Exception e){
