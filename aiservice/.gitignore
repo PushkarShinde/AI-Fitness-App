@@ -55,3 +55,28 @@ build/
 # OS-specific
 .DS_Store
 Thumbs.db
+
+# Microservice-specific build artifacts
+/target/
+/build/
+
+# Local run configs (very common mistake)
+application-local.yml
+application-local.properties
+application*.local.*
+bootstrap-local.yml
+
+# Personal run/debug configs
+.run/
+*.launch
+launchSettings.json
+
+# If this microservice has its own tests/reports
+jacoco.exec
+**/target/surefire-reports/
+**/target/jacoco.exec
+
+# Optional: if this service has embedded frontend (React/Vue/etc.)
+/node_modules/
+/dist/
+/build/

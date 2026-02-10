@@ -1,6 +1,7 @@
 package com.fitness.aiservice.service;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -32,10 +33,19 @@ public class GeminiService {
         );
 
         String response=webClient.post()
-                .uri(geminiApiUrl+geminiApiKey)
+                .uri(uriBuilder ->
+                        uriBuilder
+                                .path(geminiApiUrl)
+                                .queryParam("key", geminiApiKey)
+                                .build()
+                )
                 .header("Content-type", "application/json")
                 .bodyValue(requestBody)
                 .retrieve()
+                .onStatus(HttpStatusCode::isError, resp ->
+                        resp.bodyToMono(String.class)
+                                .map(body -> new RuntimeException("Gemini API error: " + body))
+                )
                 .bodyToMono(String.class)
                 .block();
 

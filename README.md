@@ -1,23 +1,23 @@
 # AI Fitness App
 
-Welcome to the **AI Fitness App** — anecho $PATH intelligent, microservice-driven health companion that helps users track their fitness activities and leverages AI to provide personalized insights!
+Welcome to the **AI Fitness App** — an intelligent, microservice-driven health companion that helps users track their fitness activities and leverages AI to provide personalized insights!
 
 ---
 
-## 🔥 Features
+## Features
 
-- 🧾 **User Registration & Management** with secure authentication using Keycloak.
-- 🏃 **Activity Tracking** via RESTful endpoints.
-- 📬 **Event-driven architecture** powered by RabbitMQ for real-time updates.
-- 🧠 **AI Recommendation Engine** integrated with Google Gemini for fitness insights.
-- 🛡️ **Secure API Gateway** for authenticated & authorized access.
-- 📡 **Service Discovery & Configuration** using Eureka & Config Server.
-- 🗃️ **Polyglot Persistence** using MySQL & MongoDB.
-- 🌍 Scalable Microservices built with **Spring Boot**.
+- **User Registration & Management** with secure authentication using Keycloak.
+- **Activity Tracking** via RESTful endpoints.
+- **Event-driven architecture** powered by RabbitMQ for real-time updates.
+- **AI Recommendation Engine** integrated with Google Gemini for fitness insights.
+- **Secure API Gateway** for authenticated & authorized access.
+- **Service Discovery & Configuration** using Eureka & Config Server.
+- **Polyglot Persistence** using MySQL & MongoDB.
+- Scalable Microservices built with **Spring Boot**.
 
 ---
 
-## 🧱 Architecture
+## Architecture
 
 Here's a high-level overview of the system architecture:
 
@@ -25,23 +25,23 @@ Here's a high-level overview of the system architecture:
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
-| Layer              | Technology                  |
-|-------------------|-----------------------------|
-| 🧍 Frontend        | Not included in this repo   |
-| 🧠 Backend         | Spring Boot (Java)          |
-| 🗂️ API Gateway     | Spring Cloud Gateway        |
-| 🔐 Authentication  | Keycloak                    |
-| 💬 Messaging Queue | RabbitMQ                    |
-| 🔎 Discovery       | Eureka Server               |
-| ⚙️ Config          | Spring Cloud Config Server  |
-| 💾 Databases       | MySQL (User), MongoDB (Activity, AI) |
-| 🤖 AI Integration  | Google Gemini API           |
+| Layer       | Technology                  |
+|-------------|-----------------------------|
+| Frontend    | Not included in this repo   |
+| Backend     | Spring Boot (Java)          |
+| API Gateway | Spring Cloud Gateway        |
+| Authentication | Keycloak                    |
+| Messaging Queue | RabbitMQ                    |
+| Discovery   | Eureka Server               |
+| Config      | Spring Cloud Config Server  |
+| Databases  | MySQL (User), MongoDB (Activity, AI) |
+| AI Integration | Google Gemini API           |
 
 ---
 
-## 🚀 Microservices Overview
+## Microservices Overview
 
 ### 1. `user-service`
 - Handles user registration and profile management
@@ -69,9 +69,9 @@ Here's a high-level overview of the system architecture:
 
 ---
 
-## 📦 Setup & Run Locally
+## Setup & Run Locally
 
-### 🛠️ Prerequisites
+### Prerequisites
 
 - Java 17+
 - Maven
@@ -80,13 +80,13 @@ Here's a high-level overview of the system architecture:
 - MySQL & MongoDB
 - Keycloak
 
-### 🧪 Testing with Postman
+### Testing with Postman
 
 All services are Postman-tested and running as expected. You can import the [Postman collection](postman/AI-Fitness-Collection.json) to explore endpoints.
 
 ---
 
-## ⚠️ Security Considerations
+## Security Considerations
 
 - `application.yml` is excluded from version control via `.gitignore` to protect secrets like DB credentials.
 - Secrets and credentials are managed via Spring Config Server and environment variables.
