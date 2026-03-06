@@ -1,2 +1,79 @@
+# =============================================
+# Spring Boot / Maven / Java standard ignores
+# =============================================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+# Gradle (in case you ever switch or have a module using it)
+build/
+gradle/
+gradlew
+gradlew.bat
+
+# Logs & temporary files
+*.log
+*.logs
+logs/
+tmp/
+temp/
+
+# IDEs & editors
 .idea/
+*.iml
+*.iws
 .vscode/
+!.vscode/settings.json   # ← keep if you want shared settings
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+out/
+
+# OS junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Environment & secrets (VERY IMPORTANT!)
+application-local.properties
+application-dev.properties
+application*.local.*
+.env
+.env.*
+docker-compose.override.yml
+**/src/main/resources/*.p12
+**/src/main/resources/*.jks
+**/src/main/resources/*.key
+**/src/main/resources/*.pem
+
+# Test reports & coverage
+**/target/surefire-reports/
+**/target/site/jacoco/
+jacoco.exec
+coverage/
+**/build/reports/
+
+# Dependency tools
+.dependency-reduced-pom.xml
+release.properties
+pom.xml.tag
+pom.xml.next
+pom.xml.versionsBackup
+dependency-reduced-pom.xml
+
+# Package manager caches
+.mvn/
+node_modules/           # if you have any frontend in repo
+
+# Misc
+HELP.md
+*.class
+*.jar   # ← only if you accidentally build jars outside target/
+.class
